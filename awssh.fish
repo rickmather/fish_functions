@@ -6,7 +6,5 @@ function awssh
   set --erase AWS_SECURITY_TOKEN
   set --erase AWS_SESSION_EXPIRATION
 
-  set AWS_ACCOUNT_ID $argv
-  
-  aws-vault exec "$AWS_ACCOUNT_ID" -- /opt/homebrew/bin/fish --login
+  aws-vault exec $argv -- /opt/homebrew/bin/fish --login
 end
